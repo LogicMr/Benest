@@ -4,7 +4,16 @@ declare(strict_types=1);
 const APP_NAME = 'BENEST';
 const CURRENCY_CODE = 'TZS';
 const BASE_PATH = __DIR__ . DIRECTORY_SEPARATOR . '..';
-const BASE_URL = '/benest%20management';
+
+function detect_base_url(): string {
+    $docRoot = realpath($_SERVER['DOCUMENT_ROOT'] ?? '');
+    $appRoot = realpath(BASE_PATH);
+    if (!$docRoot || !$appRoot || !str_starts_with($appRoot, $docRoot)) return '';
+    $relative = str_replace(DIRECTORY_SEPARATOR, '/', substr($appRoot, strlen($docRoot)));
+    return implode('/', array_map('rawurlencode', explode('/', trim($relative, '/'))));
+}
+$detectedBase = detect_base_url();
+define('BASE_URL', $detectedBase === '' ? '' : '/' . $detectedBase);
 
 date_default_timezone_set('UTC');
 
@@ -13,6 +22,13 @@ ob_start(static function (string $output): string {
 });
 
 if (session_status() !== PHP_SESSION_ACTIVE) {
+    $sessionPath = BASE_PATH . DIRECTORY_SEPARATOR . 'storage' . DIRECTORY_SEPARATOR . 'sessions';
+    if (!is_dir($sessionPath)) {
+        mkdir($sessionPath, 0700, true);
+    }
+    if (is_writable($sessionPath)) {
+        session_save_path($sessionPath);
+    }
     session_set_cookie_params([
         'httponly' => true,
         'secure' => isset($_SERVER['HTTPS']),

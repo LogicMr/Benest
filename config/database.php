@@ -5,7 +5,7 @@ require_once __DIR__ . '/config.php';
 $dbHost = getenv('BENEST_DB_HOST') ?: '127.0.0.1';
 $dbName = getenv('BENEST_DB_NAME') ?: 'benest';
 $dbUser = getenv('BENEST_DB_USER') ?: 'root';
-$dbPass = getenv('BENEST_DB_PASS') ?: '';
+$dbPass = getenv('BENEST_DB_PASS') ?: 'chance00';
 
 try {
     $pdo = new PDO("mysql:host={$dbHost};dbname={$dbName};charset=utf8mb4", $dbUser, $dbPass, [
