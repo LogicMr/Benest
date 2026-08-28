@@ -2,27 +2,27 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/nexabiec/benest.nexabie.co.tz/
-    - /bin/cp /home/nexabiec/repositories/benest/index.php $DEPLOYPATH
-    - /bin/cp /home/nexabiec/repositories/benest/activity-logs.php $DEPLOYPATH
-    - /bin/cp /home/nexabiec/repositories/benest/calendar.php $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/assets $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/auth $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/bugs $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/clients $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/config $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/database $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/documents $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/expenses $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/includes $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/invoices $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/milestones $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/notifications $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/payments $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/projects $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/reports $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/requirements $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/settings $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/storage $DEPLOYPATH
-    - /bin/cp -R /home/nexabiec/repositories/benest/tasks $DEPLOYPATH
+    - /bin/cp /home/nexabiec/repositories/Benest/index.php $DEPLOYPATH
+    - /bin/cp /home/nexabiec/repositories/Benest/activity-logs.php $DEPLOYPATH
+    - /bin/cp /home/nexabiec/repositories/Benest/calendar.php $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/assets $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/auth $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/bugs $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/clients $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/config $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/database $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/documents $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/expenses $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/includes $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/invoices $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/milestones $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/notifications $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/payments $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/projects $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/reports $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/requirements $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/settings $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/storage $DEPLOYPATH
+    - /bin/cp -R /home/nexabiec/repositories/Benest/tasks $DEPLOYPATH
     - /bin/find $DEPLOYPATH -type f -exec /bin/chmod 644 {} \;
     - /bin/find $DEPLOYPATH -type d -exec /bin/chmod 755 {} \;
