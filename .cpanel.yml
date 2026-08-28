@@ -1,0 +1,28 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/nexabiec/benest.nexabie.co.tz/
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp activity-logs.php $DEPLOYPATH
+    - /bin/cp calendar.php $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R auth $DEPLOYPATH
+    - /bin/cp -R bugs $DEPLOYPATH
+    - /bin/cp -R clients $DEPLOYPATH
+    - /bin/cp -R config $DEPLOYPATH
+    - /bin/cp -R database $DEPLOYPATH
+    - /bin/cp -R documents $DEPLOYPATH
+    - /bin/cp -R expenses $DEPLOYPATH
+    - /bin/cp -R includes $DEPLOYPATH
+    - /bin/cp -R invoices $DEPLOYPATH
+    - /bin/cp -R milestones $DEPLOYPATH
+    - /bin/cp -R notifications $DEPLOYPATH
+    - /bin/cp -R payments $DEPLOYPATH
+    - /bin/cp -R projects $DEPLOYPATH
+    - /bin/cp -R reports $DEPLOYPATH
+    - /bin/cp -R requirements $DEPLOYPATH
+    - /bin/cp -R settings $DEPLOYPATH
+    - /bin/cp -R storage $DEPLOYPATH
+    - /bin/cp -R tasks $DEPLOYPATH
+    - /bin/find $DEPLOYPATH -type f -exec /bin/chmod 644 {} \;
+    - /bin/find $DEPLOYPATH -type d -exec /bin/chmod 755 {} \;
