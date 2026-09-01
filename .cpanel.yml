@@ -2,6 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/nexabiec/benest.nexabie.co.tz/
+    - export DEPLOYPATH=/home/nexabiec/sample.nexabie.co.tz/
     - /bin/cp /home/nexabiec/repositories/Benest/index.php $DEPLOYPATH
     - /bin/cp /home/nexabiec/repositories/Benest/activity-logs.php $DEPLOYPATH
     - /bin/cp /home/nexabiec/repositories/Benest/calendar.php $DEPLOYPATH
